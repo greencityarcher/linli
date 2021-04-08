@@ -1,0 +1,29 @@
+.button{
+  display: inline-block;
+  padding: 17px 70px;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid $pink;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover{
+    background-color: $pink;
+
+  }
+  &--transparent{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  &--transparent:hover{
+    color: $pink;
+    background-color: transparent;
+    border: none;
+  }
+
+}

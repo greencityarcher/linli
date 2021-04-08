@@ -1,0 +1,51 @@
+.intro{
+  background-color: $white;
+  &__inner-wrap{
+    display: flex;
+    padding-top: 70px;
+    padding-bottom: 185px;
+  }
+  &__left{
+    width: 60%;
+  }
+  &__right{
+    width: 40%;
+    padding-top: 55px;
+  }
+  &__header{
+    margin-top: 0;
+    color: darkgray;
+    font-size: 50px;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+  &__subheader{
+    color: $black;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  &__text{
+    color: $black;
+    opacity: 0.96;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  &__mainpic{
+    width: 80%;
+    box-shadow: -30 30 10 0 $darkgray;
+  }
+  &__decor{
+    width: 100%;
+    background-color: $white;
+    background-size:cover;
+    &--top{
+      height: 56px;
+      background-image: url(../img/wave-top.png);
+    }
+    &--bottom{
+      height: 67px;
+      background-image: url(../img/wave-bottom.png);
+    }
+  }
+}

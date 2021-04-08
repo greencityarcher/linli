@@ -1,0 +1,18 @@
+.users{
+  padding-top: 50px;
+  padding-bottom: 85px;
+  background-color: #eb38d8;
+  background-image: linear-gradient(to bottom, $purple 0%, $purple1 100%);
+
+  &__header{
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 400;
+  }
+  &__gallery-wrap{
+    margin-bottom: 100px;
+  }
+  &__join{
+    text-align: center;
+  }
+}

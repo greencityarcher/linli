@@ -1,0 +1,20 @@
+ .usercard{
+   width: 369px;
+   color: $white;
+   text-align: center;
+   margin: 0 200;
+   &__foto{
+     width: 100%;
+     height: auto;
+   }
+   &__name{
+     margin-bottom: 10px;
+     font-size: 18px;
+     font-weight: 700;
+   }
+   &__about{
+     font-size: 16px;
+     line-height: 25px;
+     font-weight: 400;
+   }
+ }
