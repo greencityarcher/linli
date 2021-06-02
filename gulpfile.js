@@ -1,31 +1,32 @@
-var gulp = require ("gulp");
-var server = require("browser-sync").create();
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
 
-var sass = require("gulp-sass");
-var postcss = require ("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var inlinesvg = require("postcss-inline-svg");
-
-
-gulp.task("style", function(){
-  gulp.src("sass/style.scss")
-  .pipe(sass())
-  .pipe(postcss([
-    autoprefixer({browsers:[
-      "last 3 versions"
-    ]}),
-    inlinesvg
-  ]))
-  .pipe(gulp.dest("css"))
-  .pipe(server.stream());
+gulp.task('sass', function(done) {
+    gulp.src("sass/style.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("css"))
+        .pipe(browserSync.stream());
+    done();
 });
 
+gulp.task('serve', function(done) {
 
-gulp.task("serve", ["style"], function(){
-  server.init({
-    server:"."
-  });
-  gulp.watch("sass/**/*.scss", ["style"]);
-  gulp.watch("*.html")
-  .on("change", server.reload);
+    browserSync.init({
+       server: ".",
+        index: "index.html"
+
+
+    });
+
+    gulp.watch("sass/*.scss", gulp.series('sass'));
+    gulp.watch("*.html").on('change', () => {
+      browserSync.reload();
+      done();
+    });
+
+
+    done();
 });
+
+gulp.task('default', gulp.series('sass', 'serve'));

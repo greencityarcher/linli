@@ -4,12 +4,13 @@
   "devDependencies": {
     "autoprefixer": "^8.6.5",
     "browser-sync": "^2.26.14",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.2.1",
     "postcss-inline-svg": "^3.1.1"
   },
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "natives": "^1.1.6"
   }
 }
